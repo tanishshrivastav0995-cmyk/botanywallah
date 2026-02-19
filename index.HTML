@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Botany Wallah – Learn Botany the Smart Way</title>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<meta name='description' content='Botany Wallah – Professional Botany & Biology learning platform for NEET, CUET, CSIR-NET aspirants.'/>
+<meta name='keywords' content='Botany Wallah, Botany Notes, NEET Biology, CUET Botany, CSIR NET Botany, Plant Physiology, Genetics, Ecology'/>
+<meta name='author' content='Botany Wallah'/>
+
+<link rel="stylesheet" href="sai-global-styles.css">
+
+<style>
+/* ===== CLEAN PREMIUM BACKGROUND ===== */
+body{
+  background:#faf9f6;
+}
+
+/* ===== DOUBLE LAYER PREMIUM GOLD BORDER (INNER + OUTER GLOW) ===== */
+#content{
+  border:1px solid #d4af37;
+  box-shadow:
+    0 0 0 3px rgba(255,215,0,0.35),   /* outer solid ring */
+    0 0 40px rgba(212,175,55,0.6),    /* outer glow */
+    inset 0 0 18px rgba(255,215,0,0.45); /* inner glow */
+  border-radius:18px;
+}
+
+#header,
+#nav,
+
+#hero,
+.section,
+#contact,
+#footer{
+  border:1px solid #d4af37;
+  border-radius:22px; /* Rounded Borders for All Sections */
+  margin:20px; /* Space between sections */
+  box-shadow:
+    0 0 18px rgba(212,175,55,0.5),
+    inset 0 0 10px rgba(255,215,0,0.35);
+}
+
+/* ===== GOLDEN BORDER FOR FEATURED COURSE CARDS ===== */
+#courses .box{
+  border:1px solid #d4af37;
+  box-shadow:
+    0 0 15px rgba(212,175,55,0.45),
+    inset 0 0 8px rgba(255,215,0,0.25);
+  transition:all 0.3s ease;
+}
+
+#courses .box:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 25px rgba(212,175,55,0.75),
+    inset 0 0 12px rgba(255,215,0,0.45);
+}
+
+/* ===== PREMIUM GOLD CARD FOR ABOUT & FACULTY ===== */
+.about-card,
+.faculty-card{
+  max-width:900px;
+  margin:30px auto;
+  padding:35px;
+  border-radius:18px;
+  border:1px solid #d4af37;
+  background:#ffffff;
+  box-shadow:
+    0 0 0 3px rgba(255,215,0,0.25),
+    0 0 30px rgba(212,175,55,0.45),
+    inset 0 0 15px rgba(255,215,0,0.25);
+  transition:all 0.3s ease;
+  text-align:center; /* Center aligned content */
+}
+
+.about-card:hover,
+.faculty-card:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 0 3px rgba(255,215,0,0.35),
+    0 0 45px rgba(212,175,55,0.65),
+    inset 0 0 20px rgba(255,215,0,0.35);
+}
+
+.faculty-card h3{
+  margin-bottom:15px;
+  color:#111;
+  text-align:center;
+}
+
+/* ===== ULTRA PREMIUM GOLD HEADER WITH CONTRAST ANIMATION ===== */
+#header{
+  position:relative;
+  overflow:hidden;
+  background:#000; /* Black Header Background */
+  background-size:300% 300%;
+  animation:goldFlow 8s ease-in-out infinite;
+  color:#fff;
+  box-shadow:
+    0 0 0 2px rgba(255,215,0,0.6),
+    0 20px 60px rgba(212,175,55,0.7);
+}
+
+/* ===== THEME TOGGLE ICON (NOW IN NAV) ===== */
+#nav{
+  position:relative; /* Navigation not sticky */
+  width:100%;
+}
+
+.theme-toggle{
+  position:absolute;
+  top:50%;
+  right:20px;
+  transform:translateY(-50%);
+  font-size:20px;
+  cursor:pointer;
+  color:#ffd700;
+  background:#111;
+  border:1px solid #ffd700;
+  border-radius:50%;
+  width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 12px rgba(255,215,0,0.6);
+  transition:all 0.3s ease;
+  z-index:10;
+}
+
+.theme-toggle:hover{
+  transform:translateY(-50%) rotate(180deg);
+  box-shadow:0 0 22px rgba(255,215,0,0.9);
+}
+
+@keyframes goldFlow{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* moving shine overlay */
+#header::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:60%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+  transform:skewX(-20deg);
+  animation:shineMove 5s linear infinite;
+}
+
+@keyframes shineMove{
+  0%{left:-100%;}
+  100%{left:150%;}
+}
+
+#blog-title{
+  position:relative;
+  font-size:54px;
+  font-weight:900;
+  letter-spacing:1px;
+  color:#ffd700; /* Pure Premium Gold */
+  -webkit-text-fill-color:#ffd700;
+  text-shadow:
+    0 0 12px rgba(255,215,0,0.9),
+    0 0 25px rgba(255,215,0,0.7);
+}
+
+#description{
+  position:relative;
+  color:#ffd700; /* Pure Premium Gold */
+  -webkit-text-fill-color:#ffd700;
+  font-weight:600;
+  margin-top:12px;
+  text-shadow:
+    0 0 10px rgba(255,215,0,0.8),
+    0 0 20px rgba(255,215,0,0.6);
+}
+
+/* ===== PREMIUM REGISTRATION BUTTON ===== */
+.premium-register-btn{
+  display:inline-block;
+  padding:16px 38px;
+  font-size:16px;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:50px;
+  color:#111;
+  background:linear-gradient(135deg,#ffd700,#f5d76e,#d4af37);
+  border:1px solid #b8860b;
+  box-shadow:
+    0 0 0 3px rgba(255,215,0,0.35),
+    0 10px 25px rgba(212,175,55,0.45);
+  transition:all 0.3s ease;
+}
+
+.premium-register-btn:hover{
+  transform:translateY(-5px);
+  box-shadow:
+    0 0 0 3px rgba(255,215,0,0.5),
+    0 18px 40px rgba(212,175,55,0.65);
+}
+
+/* ===== NAV REGISTER BUTTON ===== */
+.nav-register{
+  background:linear-gradient(135deg,#ffd700,#f5d76e,#d4af37);
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:700;
+  color:#111 !important;
+  margin-left:10px;
+  border:1px solid #b8860b;
+  box-shadow:0 4px 12px rgba(212,175,55,0.4);
+  transition:all 0.3s ease;
+}
+
+.nav-register:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(212,175,55,0.6);
+}
+
+/* ===== HERO WHATSAPP BUTTON ===== */
+.hero-whatsapp-btn{
+  display:inline-block;
+  margin:12px;
+  padding:16px 36px;
+  font-size:17px;
+  font-weight:700;
+  text-decoration:none;
+  border-radius:50px;
+  color:#fff;
+  background:linear-gradient(135deg,#25D366,#1ebe5d);
+  border:1px solid #128C7E;
+  box-shadow:
+    0 0 0 3px rgba(37,211,102,0.25),
+    0 12px 30px rgba(37,211,102,0.45);
+  transition:all 0.3s ease;
+}
+
+.hero-whatsapp-btn:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 0 3px rgba(37,211,102,0.35),
+    0 20px 45px rgba(37,211,102,0.65);
+}
+
+
+
+
+/* ===== FULL RESPONSIVE AUTO-FIT SYSTEM ===== */
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+}
+
+#content{
+  max-width:1400px;
+  margin:auto;
+  padding:10px;
+}
+
+/* NAVIGATION RESPONSIVE */
+#nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  padding:15px;
+}
+
+#nav a{
+  padding:8px 12px;
+  font-size:14px;
+}
+
+/* GRID AUTO FIT */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+/* HERO RESPONSIVE */
+#hero{
+  text-align:center;
+  padding:60px 20px;
+}
+
+#hero h2{
+  font-size:clamp(22px,4vw,38px);
+}
+
+#hero p{
+  font-size:clamp(14px,2.5vw,18px);
+  max-width:800px;
+  margin:auto;
+}
+
+/* TEXT RESPONSIVE */
+h1{
+  font-size:clamp(28px,5vw,54px);
+}
+
+h2{
+  font-size:clamp(20px,4vw,32px);
+}
+
+/* MOBILE ADJUSTMENTS */
+@media(max-width:768px){
+
+  #header,
+  #nav,
+  #hero,
+  .section,
+  #contact,
+  #footer{
+    margin:10px;
+    border-radius:16px;
+  }
+
+  .about-card,
+  .faculty-card{
+    padding:20px;
+  }
+
+  .premium-register-btn,
+  .hero-whatsapp-btn{
+    width:100%;
+    text-align:center;
+  }
+
+  #nav{
+    flex-direction:column;
+  }
+}
+
+</style>
+</head>
+<body>
+<div id="content">
+
+<div id="nav">
+<div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+<a href="#hero">Home</a>
+<a href="#courses">Courses</a>
+<a href="#about">About</a>
+<a href="#notes">Free Notes</a>
+<a href="#contact">Contact</a>
+<a href="enquiry.html" class="nav-register">Enquiry Now</a>
+</div>
+
+<div id="header">
+<h1 id="blog-title">Botany Wallah</h1>
+<p id="description">Botany & Biology Learning Platform</p>
+</div>
+
+<div id="hero">
+<h2>Learn Botany the Smart Way</h2>
+<p>Conceptual, exam‑oriented and student‑friendly learning for NEET, CUET & CSIR‑NET aspirants.</p>
+
+<a href="https://www.youtube.com/@botanywallah01" target="_blank" class="hero-btn">▶ YouTube</a>
+<a href="https://www.facebook.com/profile.php?id=61588154401048" target="_blank" class="hero-btn">f Facebook</a>
+<a href="https://whatsapp.com/channel/0029Vb6vfxG0Vyc8AygMdB2p" target="_blank" class="hero-btn">💬 WhatsApp Channel</a>
+<a href="https://web.telegram.org/k/#@BotanyWallahBW" target="_blank" class="hero-btn">✈ Telegram</a>
+<a href="https://www.instagram.com/botanywallah?igsh=MWxubDlkdzR2M202cA==" target="_blank" class="hero-btn">📸 Instagram</a>
+<a href="https://wa.me/919759760342?text=Hello%20Botany%20Wallah,%20I%20am%20interested%20in%20your%20courses.%20Please%20guide%20me." target="_blank" class="hero-whatsapp-btn">💬 WhatsApp Now</a>
+</div>
+
+<div id="courses" class="section">
+<h2>Our Featured Courses</h2>
+<div class="grid">
+<div class="box"><strong>Class 9 Biology</strong><p>Fundamental concepts and diagrams.</p></div>
+<div class="box"><strong>Class 10 Biology</strong><p>Board-focused preparation.</p></div>
+<div class="box"><strong>Class 11 Biology</strong><p>NCERT-based theory & MCQs.</p></div>
+<div class="box"><strong>Class 12 Biology</strong><p>Exam-oriented revision & PYQs.</p></div>
+<div class="box"><strong>B.Sc. (Bachelor of Science)</strong><p>Comprehensive undergraduate-level Botany & Life Sciences preparation.</p></div>
+<div class="box"><strong>M.Sc. (Master of Science)</strong><p>Advanced postgraduate-level concepts with research-oriented depth.</p></div>
+<div class="box"><strong>CSIR-NET / JRF (Life Sciences)</strong>
+<p>Comprehensive notes, PYQs, and concept-based preparation for CSIR-NET & JRF Life Sciences.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- ABOUT SECTION -->
+<div id="about" class="section" style="background:#fdfaf3">
+<h2>About Us</h2>
+
+<div class="about-card">
+<p><strong>Mr. Tanish Kumar Srivastava</strong> is the founder and educator behind <strong>Botany Wallah</strong>.</p>
+<p>He is committed to delivering <strong>conceptual clarity</strong>, structured learning, and result‑oriented preparation for students preparing for <strong>NEET, CUET, and CSIR‑NET</strong>.</p>
+<p>The platform focuses on simplifying complex biological concepts through smart notes, PYQs, and research‑based academic depth.</p>
+<p><em>Teaching Philosophy:</em> Learn deeply, practice smartly, and succeed confidently.</p>
+</div>
+
+<div class="faculty-card">
+<h3>Academic Faculty</h3>
+<p><strong>Professor Dr. Reetu Yadav, Ph.D. (Biotechnology)</strong></p>
+<p>Jaipur, Rajasthan</p>
+<p>Faculty of Life Sciences, Banasthali Vidyapith, Jaipur</p>
+<p>Academic Mentor & Educator at <strong>Botany Wallah</strong></p>
+
+<p>With extensive academic experience in Biotechnology and Life Sciences, Dr. Reetu Yadav brings research-oriented expertise, scientific accuracy, and conceptual depth to the platform. Her guidance strengthens postgraduate and competitive examination preparation, especially for M.Sc., CSIR-NET, and research aspirants.</p>
+
+<p>Her mission is to nurture analytical thinking, research aptitude, and academic excellence among students across India.</p>
+</div>
+
+</div>
+
+<!-- FREE NOTES SECTION -->
+<div id="notes" class="section" style="background:#fffdf7">
+<h2>Free Notes</h2>
+
+<div class="grid">
+
+<div class="box">
+<strong>Class 9 Biology</strong>
+<p>Chapter-wise notes and important questions.</p>
+<a href="https://drive.google.com/drive/folders/1zUwhSJPc-cQSMqvrXzmA0B3igjFkxKKh" target="_blank" class="premium-register-btn">📂 Open Folder</a>
+</div>
+
+<div class="box">
+<strong>Class 10 Biology</strong>
+<p>Board-focused notes and concept revision.</p>
+<a href="https://drive.google.com/drive/folders/1FVPPpY0XzgqPK-TU3Q474_tUtt0FOHoK" target="_blank" class="premium-register-btn">📂 Open Folder</a>
+</div>
+
+<div class="box">
+<strong>Class 11 Biology</strong>
+<p>NCERT-based notes with MCQs.</p>
+<a href="https://drive.google.com/drive/folders/1_380ohBSAYmpaoW7hE46X79dUE1kWRJf" target="_blank" class="premium-register-btn">📂 Open Folder</a>
+</div>
+
+<div class="box">
+<strong>Class 12 Biology</strong>
+<p>Exam-oriented notes and PYQs.</p>
+<a href="https://drive.google.com/drive/folders/13OoKHN5z0b6BCq2iQZ91mjIhMCWNGTNn" target="_blank" class="premium-register-btn">📂 Open Folder</a>
+</div>
+
+<div class="box">
+<strong>B.Sc. Notes</strong>
+<p>Undergraduate-level Botany & Life Sciences study material.</p>
+<a href="https://drive.google.com/drive/folders/1x0Y2P2VQLqmRce8ZyyHiudo3NJB2VHVs" target="_blank" class="premium-register-btn">📂 Open Folder</a>
+</div>
+
+<div class="box">
+<strong>M.Sc. Notes</strong>
+<p>Advanced postgraduate-level and research-oriented notes.</p>
+<a href="https://drive.google.com/drive/folders/1yFDJWPQoc9N6aDnfxUaCsPipYKTVjXrV" target="_blank" class="premium-register-btn">📂 Open Folder</a>
+</div>
+
+<div class="box">
+<strong>CSIR-NET / JRF (Life Sciences)</strong>
+<p>Comprehensive preparation notes and PYQs.</p>
+<a href="https://drive.google.com/drive/folders/1VGsSHp6ulQ_nkpyKyOy7rjaETQIEhhaK" target="_blank" class="premium-register-btn">📂 Open Folder</a>
+</div>
+
+</div>
+</div>
+
+<div id="contact" class="section" style="background:#f8fafc">
+<h2>Contact</h2>
+<p style="text-align:center;margin-bottom:25px;">📍 <strong>Head Office:</strong> Bareilly, Uttar Pradesh, India <br> ✉ Botanywallah07@gmail.com</p>
+
+<div style="text-align:center;">
+<a href="enquiry.html" class="premium-register-btn">📝 Enquiry Now</a>
+</div>
+
+</div>
+
+<div id="footer">
+
+<div style="max-width:1100px;margin:auto;padding:40px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;text-align:left;">
+
+<div>
+<h3 style="margin-bottom:15px;color:#111;">Botany Wallah</h3>
+<p>Professional Botany & Biology learning platform dedicated to NEET, CUET and CSIR‑NET aspirants.</p>
+<p style="margin-top:12px;"><strong>Head Office:</strong><br> Bareilly, Uttar Pradesh, India</p>
+</div>
+
+<div>
+<h4 style="margin-bottom:15px;color:#111;">Quick Links</h4>
+<p><a href="#hero" style="text-decoration:none;color:#000;">Home</a></p>
+<p><a href="#courses" style="text-decoration:none;color:#000;">Courses</a></p>
+<p><a href="#about" style="text-decoration:none;color:#000;">About Us</a></p>
+<p><a href="#contact" style="text-decoration:none;color:#000;">Contact</a></p>
+</div>
+
+<div>
+<h4 style="margin-bottom:15px;color:#111;">Connect With Us</h4>
+<p><a href="https://www.youtube.com/@botanywallah01" target="_blank" style="text-decoration:none;color:#000;">YouTube</a></p>
+<p><a href="https://www.facebook.com/profile.php?id=61588154401048" target="_blank" style="text-decoration:none;color:#000;">Facebook</a></p>
+<p><a href="https://whatsapp.com/channel/0029Vb6vfxG0Vyc8AygMdB2p" target="_blank" style="text-decoration:none;color:#000;">WhatsApp Channel</a></p>
+<p><a href="https://web.telegram.org/k/#@BotanyWallahBW" target="_blank" style="text-decoration:none;color:#000;">Telegram</a></p>
+<p><a href="https://www.instagram.com/botanywallah?igsh=MWxubDlkdzR2M202cA==" target="_blank" style="text-decoration:none;color:#000;">Instagram</a></p>
+</div>
+
+</div>
+
+<div style="text-align:center;padding:15px 10px;border-top:1px solid #d4af37;margin-top:10px;">
+© 2026 <strong>Botany Wallah</strong>. All Rights Reserved.
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle('light-mode');
+  const icon=document.querySelector('.theme-toggle');
+  if(document.body.classList.contains('light-mode')){
+    document.body.style.background='#faf9f6';
+    document.getElementById('header').style.background='#000';
+    icon.textContent='☀';
+  }else{
+    document.body.style.background='#000';
+    document.getElementById('header').style.background='#000';
+    icon.textContent='🌙';
+  }
+}
+</script>
+</body>
+</html>
