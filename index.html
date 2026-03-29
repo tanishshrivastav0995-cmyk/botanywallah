@@ -10,6 +10,38 @@
 
 <link rel="stylesheet" href="sai-global-styles.css">
 
+<!-- ===== FAVICON SETUP (ALL SIZES) ===== -->
+
+<!-- Standard favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<!-- PNG Favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
+<link rel="icon" type="image/png" sizes="256x256" href="favicon-256x256.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512x512.png">
+
+<!-- Apple iOS Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+
+<!-- Android / Chrome Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+<!-- Web Manifest -->
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Windows Tile -->
+<meta name="msapplication-config" content="browserconfig.xml">
+<meta name="msapplication-TileColor" content="#0b5d2a">
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#0b5d2a">
+
 <style>
 /* ===== CLEAN PREMIUM BACKGROUND ===== */
 
@@ -145,6 +177,48 @@ body{
     inset 0 0 15px rgba(255,215,0,0.25);
   transition:all 0.3s ease;
   text-align:center; /* Center aligned content */
+}
+
+/* ===== FOUNDER LAYOUT (LEFT RECTANGLE + HOVER GLOW) ===== */
+.about-flex{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  text-align:left;
+}
+
+.founder-img{
+  width:180px;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+  border:2px solid #d4af37;
+  transition:all .35s ease;
+  box-shadow:0 0 12px rgba(212,175,55,.35);
+}
+
+.founder-img:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 25px rgba(212,175,55,.8),
+    0 0 45px rgba(212,175,55,.55);
+}
+
+.about-text{
+  flex:1;
+}
+
+@media(max-width:768px){
+  .about-flex{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .founder-img{
+    width:160px;
+    height:200px;
+  }
+}
 }
 
 .about-card:hover,
@@ -552,7 +626,7 @@ h2{
 <h2>Learn Botany the Smart Way</h2>
 <p>Conceptual, exam‑oriented and student‑friendly learning for NEET, CUET & CSIR‑NET aspirants.</p>
 
-<a href="https://www.youtube.com/@botanywallah01" target="_blank" class="hero-btn btn-youtube">▶ YouTube</a>
+<a href="https://youtube.com/@botanywallah-bw?si=EsDW4B37dhp-y33A" target="_blank" class="hero-btn btn-youtube">▶ YouTube</a>
 <a href="https://www.facebook.com/profile.php?id=61588154401048" target="_blank" class="hero-btn btn-facebook">f Facebook</a>
 <a href="https://whatsapp.com/channel/0029Vb6vfxG0Vyc8AygMdB2p" target="_blank" class="hero-btn btn-whatsapp-channel">💬 WhatsApp Channel</a>
 <a href="https://t.me/BotanyWallahBW" target="_blank" class="hero-btn btn-telegram">✈ Telegram</a>
@@ -581,10 +655,17 @@ h2{
 <h2>About Us</h2>
 
 <div class="about-card">
+<div class="about-flex">
+<img src="tanish.jpg" alt="Founder - Tanish Kumar Srivastava" class="founder-img">
+
+<div class="about-text">
 <p><strong>Mr. Tanish Kumar Srivastava</strong> is the founder and educator behind <strong>Botany Wallah</strong>.</p>
 <p>He is committed to delivering <strong>conceptual clarity</strong>, structured learning, and result‑oriented preparation for students preparing for <strong>NEET, CUET, and CSIR‑NET</strong>.</p>
 <p>The platform focuses on simplifying complex biological concepts through smart notes, PYQs, and research‑based academic depth.</p>
 <p><em>Teaching Philosophy:</em> Learn deeply, practice smartly, and succeed confidently.</p>
+</div>
+
+</div>
 </div>
 
 <div class="faculty-section">
@@ -639,6 +720,23 @@ h2{
 <p>Former Principal – JSM Inter College, Ushait, Badaun, Uttar Pradesh.</p>
 <p>Academic Mentor & Educator at <strong>Botany Wallah</strong></p>
 <p>Brings extensive teaching and research experience to guide students in advanced botanical and life science studies.</p>
+</div>
+
+<div class="faculty-card">
+<p><strong>Hemlata Chundawat</strong></p>
+<p>M.Sc. Botany (Gold Medalist 🥇 MLSU Udaipur), B.Ed.</p>
+<p>CSIR‑NET and GATE Qualified</p>
+<p>Cleared Written Examination – RPSC Assistant Professor</p>
+<p>Academic Mentor & Educator at <strong>Botany Wallah</strong></p>
+<p>Brings strong academic excellence and conceptual teaching approach for undergraduate and postgraduate botany students.</p>
+</div>
+
+<div class="faculty-card">
+<p><strong>Dr. Tripti Singh</strong></p>
+<p>Assistant Professor, Department of Biosciences</p>
+<p>IMS University Courses Campus, Ghaziabad</p>
+<p>Academic Mentor & Educator at <strong>Botany Wallah</strong></p>
+<p>Provides academic guidance with focus on conceptual biology, life sciences preparation and higher education mentoring.</p>
 </div>
 
 </div>
@@ -729,7 +827,7 @@ h2{
 
 <div>
 <h4 style="margin-bottom:15px;color:#111;">Connect With Us</h4>
-<p><a href="https://www.youtube.com/@botanywallah01" target="_blank" style="text-decoration:none;color:#000;">YouTube</a></p>
+<p><a href="https://youtube.com/@botanywallah-bw?si=EsDW4B37dhp-y33A" target="_blank" style="text-decoration:none;color:#000;">YouTube</a></p>
 <p><a href="https://www.facebook.com/profile.php?id=61588154401048" target="_blank" style="text-decoration:none;color:#000;">Facebook</a></p>
 <p><a href="https://whatsapp.com/channel/0029Vb6vfxG0Vyc8AygMdB2p" target="_blank" style="text-decoration:none;color:#000;">WhatsApp Channel</a></p>
 <p><a href="https://t.me/BotanyWallahBW" target="_blank" style="text-decoration:none;color:#000;">Telegram</a></p>
